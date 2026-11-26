@@ -1,16 +1,79 @@
 <!doctype html>
-<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#12283b"><title>光遇｜常駐先祖圖鑑</title>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101d2a">
+<title>光遇｜先祖位置圖</title>
 <style>
-:root{color-scheme:dark;--bg:#0d1925;--panel:#142638;--line:#2b4154;--text:#eef5f8;--muted:#a6bccb;--accent:#b3e5ef}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.55 system-ui,"Microsoft JhengHei",sans-serif}main{max-width:850px;margin:auto;padding:14px 12px 32px}h1{font-size:22px;margin:0 0 4px}header{padding:12px 0}header small,.muted{color:var(--muted)}.tools{position:sticky;top:0;background:var(--bg);z-index:2;padding:8px 0 10px}input[type=search]{width:100%;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:16px}.tabs{display:flex;gap:6px;overflow:auto;padding:9px 0}.tabs button{white-space:nowrap;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--text);padding:8px 11px;cursor:pointer}.tabs button.active{background:#a6dce7;color:#112c3c;border-color:#a6dce7;font-weight:bold}.status{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;gap:8px}.status label{white-space:nowrap}h2{font-size:17px;margin:18px 0 7px}.realm{border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--panel)}table{border-collapse:collapse;width:100%;table-layout:fixed}td{vertical-align:middle;border-bottom:1px solid var(--line);padding:8px}tr:last-child td{border:0}.info{width:52%}.thumb{width:48%;padding-left:2px}.name{font-size:15px;font-weight:650}.detail{color:var(--muted);font-size:12px;margin-top:3px;overflow-wrap:anywhere}.links{display:flex;gap:9px;flex-wrap:wrap;margin-top:5px}a{color:var(--accent);font-size:12px;text-decoration:none}input[type=checkbox]{accent-color:#93d8e8;width:17px;height:17px;vertical-align:middle;cursor:pointer}.pic{display:block;width:100%;aspect-ratio:1.55;object-fit:contain;background:#0b1621;border-radius:5px;cursor:zoom-in}.picbtn{display:block;width:100%;padding:0;border:0;background:none}.missing{display:flex;align-items:center;justify-content:center;text-align:center;background:#0d1c2a;aspect-ratio:1.55;border-radius:5px;color:var(--muted);font-size:12px;padding:7px}.done{opacity:.56}footer{margin-top:22px;color:var(--muted);font-size:12px}dialog{background:#0b1723;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px;width:min(96vw,1100px);max-height:95vh}dialog::backdrop{background:#000d}dialog img{display:block;max-width:100%;max-height:78vh;margin:auto;object-fit:contain}dialog button{float:right;color:var(--text);background:var(--panel);border:1px solid var(--line);padding:8px;border-radius:6px}@media(min-width:640px){main{padding:24px}td{padding:12px}.pic,.missing{max-height:180px}.info{width:56%}.thumb{width:44%}.name{font-size:17px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
-</style></head><body><main><header><h1>光遇先祖位置圖鑑</h1><small>37 位常駐先祖 · 點圖片放大 · 晨島預設不顯示</small></header><div class="tools"><input id="q" type="search" placeholder="搜尋先祖、動作或位置"><nav id="tabs" class="tabs"></nav><div class="status"><span id="count">載入中</span><label><input id="only" type="checkbox">未收集</label></div></div><div id="list"></div><footer>圖片優先使用 BWiki，缺圖使用 18183 攻略。參考圖可能有版本差異；缺圖與下載失敗均會標示。請以遊戲內位置為準。<br><a href="https://wiki.biligame.com/sky/">光遇 BWiki</a> · <a href="https://sky-children-of-the-light.fandom.com/wiki/Regular_Spirits">Regular Spirits</a></footer></main><dialog id="zoom"><button id="close">關閉 ✕</button><p id="caption"></p><img id="large" alt=""></dialog>
+:root{color-scheme:dark;--bg:#101d2a;--panel:#1b3042;--line:#344c60;--text:#eef6fa;--accent:#b6e4ee}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,"Microsoft JhengHei",sans-serif}
+main{max-width:1000px;margin:auto;padding:0 8px 20px}
+nav{position:sticky;top:0;z-index:2;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;padding:10px 0;background:var(--bg)}
+button{font:inherit;cursor:pointer}
+.tab{min-width:0;padding:10px 0;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--text);font-size:15px;white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#102e3c;font-weight:700}
+#gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;align-items:stretch}
+.tile{min-width:0;width:100%;padding:0;display:flex;align-items:center;justify-content:center;background:#0b1620;border:1px solid var(--line);border-radius:6px;overflow:hidden;aspect-ratio:1.43}
+.tile img{display:block;width:100%;height:100%;object-fit:contain;cursor:zoom-in}
+.missing{font-size:12px;color:#9eb2c0;text-align:center;padding:8px}
+#message{margin:10px 0;color:#9eb2c0;text-align:center;font-size:12px}
+footer{text-align:center;font-size:11px;margin-top:14px;color:#9eb2c0}
+footer a{color:inherit}
+dialog{padding:0;border:0;background:#08121b;width:98vw;max-width:1400px;max-height:96dvh;overflow:auto}
+dialog::backdrop{background:#000e}
+dialog img{display:block;width:100%;max-height:88dvh;object-fit:contain}
+#close{display:block;margin:6px 6px 6px auto;padding:6px 14px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--text)}
+@media(min-width:800px){main{padding:0 12px 24px}nav{gap:8px;padding:12px 0}#gallery{gap:8px;grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<main>
+<nav id="tabs" aria-label="地圖" role="tablist"></nav>
+<div id="gallery"></div>
+<div id="message" role="status" hidden></div>
+<footer>圖片來源：<a href="https://wiki.biligame.com/sky/" target="_blank" rel="noopener">BWiki</a> · <a href="https://www.18183.com/" target="_blank" rel="noopener">18183</a></footer>
+</main>
+<dialog id="zoom"><button id="close" aria-label="關閉圖片">✕</button><img id="large" alt="先祖位置圖"></dialog>
 <script>
 (async()=>{
-const $=id=>document.getElementById(id);let data,manifest={};try{data=await fetch('spirits.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()});}catch(e){$('list').textContent='先祖資料載入失敗，請重新整理。';return}
-try{manifest=await fetch('images/manifest.json').then(r=>r.ok?r.json():{});}catch{}
-let filter='all',done=new Set();try{done=new Set(JSON.parse(localStorage.getItem('sky-spirit-done')||'[]'))}catch{}
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function tabs(){$('tabs').innerHTML=[['all','其他五圖'],...data.map(x=>[x.id,x.name])].map(([id,n])=>'<button data-id="'+id+'" class="'+(filter===id?'active':'')+'">'+n+'</button>').join('');$('tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{filter=b.dataset.id;tabs();render()});}
-function render(){const q=$('q').value.trim().toLowerCase();let n=0;$('list').innerHTML=data.filter(m=>filter==='all'?m.id!=='dawn':m.id===filter).map(m=>{const arr=m.spirits.filter(s=>([m.name,s.name,s.action,s.location,s.zh].join(' ').toLowerCase().includes(q))&&(!$('only').checked||!done.has(s.id)));if(!arr.length)return '';n+=arr.length;return '<h2>'+m.name+' · '+m.spirits.filter(s=>done.has(s.id)).length+'/'+m.spirits.length+'</h2><div class="realm"><table><tbody>'+arr.map(s=>{const local=manifest[s.id]?.path;const wiki='https://wiki.biligame.com/sky/'+encodeURIComponent(m.slug)+'#'+encodeURIComponent(s.zh);return '<tr class="'+(done.has(s.id)?'done':'')+'"><td class="info"><label><input type="checkbox" data-check="'+s.id+'" '+(done.has(s.id)?'checked':'')+'> <span class="name">'+esc(s.name)+'</span></label><div class="detail">'+esc(s.action)+'</div><div class="detail">'+esc(s.location)+'</div><div class="links"><a href="'+wiki+'" target="_blank" rel="noopener">圖鑑</a><a href="https://www.bilibili.com/video/BV1AT4y1V7Ub/?p='+s.id+'" target="_blank" rel="noopener">影片</a>'+(s.image?'<a href="'+esc(s.image)+'" target="_blank" rel="noopener">原圖</a>':'')+'</div></td><td class="thumb">'+(local?'<button class="picbtn" data-name="'+esc(s.name)+'" data-src="'+esc(local)+'"><img class="pic" src="'+esc(local)+'" loading="lazy" decoding="async" alt="'+esc(s.name)+'位置圖"></button>':'<div class="missing">'+(s.image?'圖片尚未成功下載':'缺少已確認圖片')+'</div>')+'</td></tr>'}).join('')+'</tbody></table></div>'}).join('')||'<p class="muted">沒有符合條件的先祖</p>';$('count').textContent='顯示 '+n+' 位 · 已收集 '+done.size+'/37';$('list').querySelectorAll('[data-check]').forEach(c=>c.onchange=()=>{const id=Number(c.dataset.check);if(c.checked)done.add(id);else done.delete(id);try{localStorage.setItem('sky-spirit-done',JSON.stringify([...done]))}catch{}render()});$('list').querySelectorAll('.picbtn').forEach(b=>{b.onclick=()=>{$('large').src=b.dataset.src;$('caption').textContent=b.dataset.name;$('zoom').showModal()};b.querySelector('img').onerror=()=>{b.replaceWith(Object.assign(document.createElement('div'),{className:'missing',textContent:'本地圖片讀取失敗'}))}});}
-$('close').onclick=()=>$('zoom').close();$('zoom').onclick=e=>{if(e.target===$('zoom'))$('zoom').close()};$('q').oninput=render;$('only').onchange=render;tabs();render();
-})();
-</script></body></html>
+const $=id=>document.getElementById(id);
+const ids=['prairie','forest','valley','wasteland','vault'];
+const [data,manifest]=await Promise.all([
+fetch('spirits.json').then(r=>{if(!r.ok)throw Error('先祖資料載入失敗');return r.json()}),
+fetch('images/manifest.json').then(r=>r.ok?r.json():{}).catch(()=>({}))
+]);
+const maps=ids.map(id=>data.find(m=>m.id===id)).filter(Boolean);
+let current=maps.some(m=>m.id===location.hash.slice(1))?location.hash.slice(1):ids[0];
+function render(){
+const m=maps.find(x=>x.id===current);
+$('tabs').replaceChildren();
+maps.forEach(map=>{
+const b=document.createElement('button');
+b.className='tab';b.textContent=map.name;b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-selected',String(map.id===current));
+b.onclick=()=>{current=map.id;history.replaceState(null,'','#'+current);render();window.scrollTo(0,0)};
+$('tabs').append(b);
+});
+$('gallery').replaceChildren();
+let missing=0;
+for(const s of m.spirits){
+const path=manifest[String(s.id)]?.path;
+if(!path){missing++;continue}
+const b=document.createElement('button');
+b.className='tile';b.type='button';b.setAttribute('aria-label','放大位置圖');
+const im=document.createElement('img');
+im.alt='先祖位置圖';im.src=path;im.loading='lazy';im.decoding='async';
+im.onerror=()=>{b.disabled=true;b.replaceChildren();b.textContent='圖片讀取失敗';b.classList.add('missing')};
+b.onclick=()=>{$('large').src=path;$('zoom').showModal()};
+b.append(im);$('gallery').append(b);
+}
+$('message').hidden=!missing;$('message').textContent=missing?missing+' 張位置圖尚缺':'';
+}
+$('close').onclick=()=>$('zoom').close();
+$('zoom').onclick=e=>{if(e.target===$('zoom'))$('zoom').close()};
+render();
+})().catch(e=>{const el=document.getElementById('message');el.hidden=false;el.textContent=e.message||'載入失敗，請重新整理'});
+</script>
+</body>
+</html>
