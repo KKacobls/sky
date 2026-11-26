@@ -1,0 +1,377 @@
+[
+  {
+    "id": "dawn",
+    "name": "晨島",
+    "slug": "晨岛",
+    "spirits": [
+      {
+        "id": 1,
+        "name": "指路蠟燭匠",
+        "zh": "指路蜡烛匠",
+        "action": "指路",
+        "location": "神殿石階左側洞穴",
+        "image": "https://patchwiki.biligame.com/images/sky/2/2f/i7mx27daf0kcnyyh84c4cyjwgpw1fll.png",
+        "source": "BWiki"
+      },
+      {
+        "id": 2,
+        "name": "引路觀星者",
+        "zh": "引路观星者",
+        "action": "跟我來",
+        "location": "巨型石階附近",
+        "image": "https://patchwiki.biligame.com/images/sky/4/4f/k7pnl5nm53e7nmb26pdori9bwaufxsf.png",
+        "source": "BWiki"
+      },
+      {
+        "id": 3,
+        "name": "回絕行者",
+        "zh": "回绝行者",
+        "action": "拒絕",
+        "location": "神殿入口左側洞穴",
+        "image": "https://patchwiki.biligame.com/images/sky/5/53/an5xku25xar5335n64evs3j0e3kccah.png",
+        "source": "BWiki"
+      }
+    ]
+  },
+  {
+    "id": "prairie",
+    "name": "雲野",
+    "slug": "云野",
+    "spirits": [
+      {
+        "id": 4,
+        "name": "引蝶人",
+        "zh": "引蝶人",
+        "action": "招蝴蝶",
+        "location": "蝴蝶平原半球形山包洞口",
+        "image": "https://patchwiki.biligame.com/images/sky/6/6e/dcrbbdlwbzjaqejkuhrow9yhqfidmjo.png",
+        "source": "BWiki"
+      },
+      {
+        "id": 7,
+        "name": "鼓掌鐘匠",
+        "zh": "鼓掌钟匠",
+        "action": "鼓掌",
+        "location": "仙鄉左側鐘塔雙人門",
+        "image": "https://patchwiki.biligame.com/images/sky/0/08/frnoyilw9vcpd9cmsuvkpwsvtokrok6.png",
+        "source": "BWiki"
+      },
+      {
+        "id": 10,
+        "name": "歡笑追光者",
+        "zh": "欢笑追光者",
+        "action": "大笑",
+        "location": "仙鄉右側鐘塔洞穴",
+        "image": "https://patchwiki.biligame.com/images/sky/e/ee/fm3t5b630gzhmllcqmyzp5fiemnp8mn.png",
+        "source": "BWiki"
+      },
+      {
+        "id": 8,
+        "name": "揮手鐘匠",
+        "zh": "挥手钟匠",
+        "action": "揮手",
+        "location": "仙鄉中央鐘塔島",
+        "image": "https://patchwiki.biligame.com/images/sky/1/1d/svg244miacfurf9tllgyikjbi4rty7f.png",
+        "source": "BWiki"
+      },
+      {
+        "id": 9,
+        "name": "犯困船匠",
+        "zh": "犯困船匠",
+        "action": "打哈欠",
+        "location": "仙鄉中央鐘塔雙人門",
+        "image": "https://patchwiki.biligame.com/images/sky/c/cc/4jzrxryufnnx2rvqt9puxvzqgd1c4ak.png",
+        "source": "BWiki"
+      },
+      {
+        "id": 6,
+        "name": "辛勞碼頭工",
+        "zh": "辛劳码头工",
+        "action": "擦汗",
+        "location": "幽光山洞左側隧道",
+        "image": "https://patchwiki.biligame.com/images/sky/f/f9/470wnm738gqeq8qn16mi5n2xce9f874.png",
+        "source": "BWiki"
+      },
+      {
+        "id": 11,
+        "name": "祭光參事",
+        "zh": "祭光参事",
+        "action": "舉蠟燭",
+        "location": "八人合作機關中央神壇",
+        "image": "https://patchwiki.biligame.com/images/sky/7/7c/o1db862hnxl8vo3rwr8odejfvqcex85.png",
+        "source": "BWiki"
+      },
+      {
+        "id": 5,
+        "name": "鳥語者",
+        "zh": "鸟语者",
+        "action": "鳥叫",
+        "location": "雲頂浮石右後方浮島",
+        "image": "https://patchwiki.biligame.com/images/sky/8/80/k1hh1l2awhbxbkyyg3091p1i2xo4paq.png",
+        "source": "BWiki"
+      }
+    ]
+  },
+  {
+    "id": "forest",
+    "name": "雨林",
+    "slug": "雨林",
+    "spirits": [
+      {
+        "id": 12,
+        "name": "顫抖開拓者",
+        "zh": "颤抖开拓者",
+        "action": "發抖",
+        "location": "靜謐庭院左側",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213141526.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 13,
+        "name": "羞澀勘探者",
+        "zh": "羞涩勘探者",
+        "action": "害羞",
+        "location": "螢光森林入口附近",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213141525.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 14,
+        "name": "躲貓貓拓荒者",
+        "zh": "躲猫猫拓荒者",
+        "action": "躲貓貓",
+        "location": "螢光森林",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213141525-50.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 15,
+        "name": "嬌嗔搬運工",
+        "zh": "娇嗔搬运工",
+        "action": "生氣",
+        "location": "螢光森林洞口",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213141524.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 19,
+        "name": "悲傷礦工",
+        "zh": "悲伤矿工",
+        "action": "哭泣",
+        "location": "密林遺跡石洞",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213141526-50.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 16,
+        "name": "沮喪獵人",
+        "zh": "沮丧猎人",
+        "action": "抱頭",
+        "location": "密林遺跡入口右側",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213141524-50.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 17,
+        "name": "歉意伐木工",
+        "zh": "歉意伐木工",
+        "action": "磕頭",
+        "location": "密林遺跡斷樹附近",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213141527.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 18,
+        "name": "鯨語者",
+        "zh": "鲸语者",
+        "action": "鯨魚叫聲",
+        "location": "密林遺跡鯨魚骸骨",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213141527-50.jpg@!18183",
+        "source": "18183"
+      }
+    ]
+  },
+  {
+    "id": "valley",
+    "name": "霞谷",
+    "slug": "霞谷",
+    "spirits": [
+      {
+        "id": 22,
+        "name": "倒立運動員",
+        "zh": "倒立运动员",
+        "action": "倒立",
+        "location": "霞光城長廊",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213143348-50.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 25,
+        "name": "空翻亞軍",
+        "zh": "空翻亚军",
+        "action": "後空翻",
+        "location": "霞光城左側亭子",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213143347-50.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 24,
+        "name": "鞠躬季軍",
+        "zh": "鞠躬季军",
+        "action": "鞠躬",
+        "location": "落日競技場",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213143347-51.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 26,
+        "name": "叫好觀眾",
+        "zh": "叫好观众",
+        "action": "喝彩",
+        "location": "落日競技場看台",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213143349.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 20,
+        "name": "自信觀光客",
+        "zh": "自信观光客",
+        "action": "叉腰站姿",
+        "location": "滑冰場右側高台",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213143347.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 21,
+        "name": "自豪冠軍",
+        "zh": "自豪冠军",
+        "action": "雙手抱胸",
+        "location": "落日競技場左側高處看台",
+        "image": "",
+        "source": ""
+      },
+      {
+        "id": 23,
+        "name": "鰩語者",
+        "zh": "鳐语者",
+        "action": "鰩鯤叫聲",
+        "location": "霞光城",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213143348.jpg@!18183",
+        "source": "18183"
+      }
+    ]
+  },
+  {
+    "id": "wasteland",
+    "name": "暮土",
+    "slug": "暮土",
+    "spirits": [
+      {
+        "id": 28,
+        "name": "昏厥戰士",
+        "zh": "昏厥战士",
+        "action": "倒地裝死",
+        "location": "邊陲荒漠左側柱子後",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213145I7.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 27,
+        "name": "驚恐難民",
+        "zh": "惊恐难民",
+        "action": "害怕",
+        "location": "邊陲荒漠高台",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213145I7-50.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 29,
+        "name": "無畏士兵",
+        "zh": "无畏士兵",
+        "action": "放鬆站姿",
+        "location": "一龍圖兩根高柱之間",
+        "image": "https://patchwiki.biligame.com/images/sky/0/02/qrlq96qsu2n7y1jw8rlaijgtg34cc4l.png",
+        "source": "BWiki"
+      },
+      {
+        "id": 30,
+        "name": "隱秘倖存者",
+        "zh": "隐秘幸存者",
+        "action": "警惕站姿",
+        "location": "四龍圖左側山洞",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213145J0.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 31,
+        "name": "行禮船長",
+        "zh": "行礼船长",
+        "action": "敬禮",
+        "location": "沉船圖",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213145I7-51.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 32,
+        "name": "瞭望哨兵",
+        "zh": "瞭望哨兵",
+        "action": "張望",
+        "location": "遠古戰場左側石階",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213145J1.jpg@!18183",
+        "source": "18183"
+      }
+    ]
+  },
+  {
+    "id": "vault",
+    "name": "禁閣",
+    "slug": "禁阁",
+    "spirits": [
+      {
+        "id": 33,
+        "name": "祈禱聖徒",
+        "zh": "祈祷圣徒",
+        "action": "祈禱",
+        "location": "一樓四人門內",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213151P4-50.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 34,
+        "name": "氣功高人",
+        "zh": "气功高人",
+        "action": "推石頭",
+        "location": "二樓四人門內",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213151P5.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 35,
+        "name": "禮貌學者",
+        "zh": "礼貌学者",
+        "action": "端莊站姿",
+        "location": "三樓浮空平台",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213151P4-51.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 37,
+        "name": "禪修院士",
+        "zh": "禅修院士",
+        "action": "打坐",
+        "location": "四樓圓錐平台",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213151P5-50.jpg@!18183",
+        "source": "18183"
+      },
+      {
+        "id": 36,
+        "name": "靈語者",
+        "zh": "灵语者",
+        "action": "遙鯤叫聲",
+        "location": "四樓浮石，需解鎖鰩語者",
+        "image": "https://img.18183.com/uploads/allimg/221213/469-221213151P6.jpg@!18183",
+        "source": "18183"
+      }
+    ]
+  }
+]
