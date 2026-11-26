@@ -1,35 +1,47 @@
 name: Deploy Sky atlas
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: pages
   cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: Verify GitHub Pages configuration
+        uses: actions/configure-pages@v5
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install requests pillow
-      - run: python build_images.py
-      - uses: actions/upload-pages-artifact@v3
+      - name: Install image processing dependencies
+        run: pip install requests pillow
+      - name: Build site and download images
+        run: python build_images.py
+      - name: Upload static website
+        uses: actions/upload-pages-artifact@v3
         with:
           path: public
+
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
-      - uses: actions/configure-pages@v5
-      - id: deployment
+      - name: Publish website
+        id: deployment
         uses: actions/deploy-pages@v4
